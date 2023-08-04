@@ -6,35 +6,35 @@ using System.Threading.Tasks;
 
 namespace isPalidrome
 {
-    internal class Palidrome
+    public class Palidrome
     {
-    }
-
-    public bool IsPalindrome(string a)
-    {
-        char[] AArray = a.ToCharArray();
-
-        int begin = 0;
-
-        int end = AArray.Length;
 
 
-        while (begin < end)
+        public bool IsPalindrome(string a)
         {
-            if (AArray[begin] == AArray[end])
-            {
-                return true;
+            char[] AArray = a.ToCharArray();
+
+            int begin = 0;
+
+            int end = AArray.Length;
 
 
-            }
-            else
+            while (begin < end)
             {
-                begin++;
-                end--;
+                if (AArray[begin] == AArray[end])
+                {
+                    return true;
+
+
+                }
+                else
+                {
+                    begin++;
+                    end--;
+                }
             }
+            return false;
         }
-        return false;
+
     }
-
-
 }
